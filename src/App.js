@@ -1,8 +1,8 @@
+import React from 'react'
 import Header from './components/Header'
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import Products from './components/Products';
-import NewProduct from './components/NewProduct';
-
+import Products from './containers/Products';
+import NewProduct from './containers/NewProduct';
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
                   <NewProduct />
                 </Route>
                 <Route path="/edit-product/:id">
-                  <NewProduct />
+                  <NewProduct props/>
                 </Route>
             </Switch>
           </div>
